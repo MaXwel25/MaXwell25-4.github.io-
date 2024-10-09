@@ -1,0 +1,253 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #c7fcec; 
+    color: #008000; 
+}
+
+a {
+    color: 0000ff; /* Замените на нужный вам цвет */
+}
+
+.hname{
+    text-align: center;
+    padding: 80 px;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.change_hyperlink{
+    margin-bottom: 40px;
+    border-radius: 3%;
+    background-color: #87CEFA;
+    order: 1
+}
+
+.otsyp{
+    margin-top:25px;
+    margin-left: 10px;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.fname{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.link-list {
+    order: 2;
+    margin-bottom: 20px;
+}
+
+.block_chang_hyp{
+    display: static;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #87CEFA;
+    color: #008000;
+    text-align: center;
+    display: flex;
+    order: 0; 
+    height: 150px;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+
+#logo {
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 160px;
+    height: 140px;
+    float: right;
+    border-radius: 50%;
+  
+}
+
+.welcome{
+    position: relative;
+    padding-left: 20px;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 15px;
+}
+
+nav {
+    widht: 50%;
+    color: #008000;
+    background-color: #45A29A;
+    text-align: center;
+    position: flex;
+    float: right;
+    height: 80px;
+    display: flex;
+    order: -1;
+}
+
+.flex-container1 {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+.menu {
+    height: 70px;
+    list-style: none;
+    flex: right;
+    
+}
+
+.menu li {
+    display: inline;
+    margin: 0 30px;
+}
+
+.menu a {
+    color: #66FCF1;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное направление по умолчанию */
+    margin-bottom: 20px; /* Добавить отступ между элементами */
+}
+
+.link-list {
+    order: 2; /* Ссылки отображаются первыми на мобильных устройствах */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #b8a68f; 
+    text-align: left;
+}
+
+thead th {
+    background-color: #ffa500;
+    color: #66FCF1;
+}
+
+.even {
+
+    background-color: #ffa500; 
+}
+
+.odd {
+    background-color: #ff0000;
+}
+
+footer {
+    width: 100%;
+    background-color: #87CEFA;
+    order: 3;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        background-color: #87CEFA;
+        color: #008000;
+        text-align: center;
+        padding: 10px;
+        height: 400px;
+    }
+    nav {
+    
+        background-color: #45A29A;
+        position: static;
+        float: left;
+        margin: 300px;
+    }
+    .menu {
+        list-style: none;
+        padding: 0;
+    }
+    .block_chang_hyp {
+        flex-direction: column; /* Вертикальное направление для мобильных телефонов */
+    }
+    .change_hyperlink{
+        flex-direction: column;
+    }
+    /* Изменение порядка для больших экранов */
+    .link-list {
+        order: 1; /* Ссылки отображаются после таблицы на больших экранах */
+        margin-right: 0; /* Убираем отступ вправо */
+    }
+
+    table {
+        order: 2; /* Таблица будет первой на больших экранах */
