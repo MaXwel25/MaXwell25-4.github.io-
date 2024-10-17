@@ -1,13 +1,24 @@
+a{
+    text-decoration: none;
+    color: 0000ff;
+}
+
+ul{
+    list-style-position: inside; 
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px 0;
+    padding: 0;
     background-color: #c7fcec; 
     color: #008000; 
+    font-size: 1rem;
 }
 
-a {
-    color: 0000ff; /* Замените на нужный вам цвет */
+main{
+    display: flex;
+    flex-direction: column;
 }
 
 .hname{
@@ -29,6 +40,20 @@ a {
     order: 1
 }
 
+.change_hyperlink_table{
+    margin-bottom: 40px;
+    border-radius: 3%;
+    background-color: #87CEFA;
+    order: 2
+}
+
+.change_forma{
+    margin-bottom: 40px;
+    border-radius: 3%;
+    background-color: #87CEFA;
+    order: 3
+}
+
 .otsyp{
     margin-top:25px;
     margin-left: 10px;
@@ -42,12 +67,23 @@ a {
     text-align: center;
 }
 
-.link-list {
-    order: 2;
-    margin-bottom: 20px;
+.block_chang_hyp{
+    display: static;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 15px;
 }
 
-.block_chang_hyp{
+.block_chang_table{
+    display: static;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.block_forma{
     display: static;
     width: 90%;
     margin: auto;
@@ -65,84 +101,66 @@ header {
     order: 0; 
     height: 150px;
 }
+.welcome {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+  }
 
-.heading{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-}
+
 
 
 #logo {
     padding-top: 5px;
     padding-left: 5px;
-    width: 160px;
+    width: 140px;
     height: 140px;
     float: right;
     border-radius: 50%;
   
 }
 
-.welcome{
+
+.welcome {
     position: relative;
-    padding-left: 20px;
+    margin: auto;
     text-align: center;
-    padding-top: 25px;
-    font-size: 15px;
-}
+    font-size: 40px;
+  }
 
-nav {
-    widht: 50%;
-    color: #008000;
-    background-color: #45A29A;
-    text-align: center;
-    position: flex;
-    float: right;
-    height: 80px;
-    display: flex;
+nav{
     order: -1;
-}
-
-.flex-container1 {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-
-.menu {
     height: 70px;
-    list-style: none;
-    flex: right;
-    
 }
 
-.menu li {
-    display: inline;
-    margin: 0 30px;
+nav div{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.menu a {
-    color: #66FCF1;
+.navigation li{
+    border-radius: 10% ;
+    list-style-type: none;
+    margin-top: 5px;
+    margin-left: -10px;
+    margin-right: 20px;
+    width: 100%;
+    background-color:#ffff00
+}
+
+.navigation ul li a {
+    display: block;
+    color: #000;
+    padding: 8px 19px;
     text-decoration: none;
 }
 
-.menu a:hover {
-    text-decoration: underline;
-}
 
-.flex-container {
+.flex-container1{
+    text-align: center;
     display: flex;
-    flex-direction: column; /* Вертикальное направление по умолчанию */
-    margin-bottom: 20px; /* Добавить отступ между элементами */
-}
-
-.link-list {
-    order: 2; /* Ссылки отображаются первыми на мобильных устройствах */
-    margin-bottom: 20px; /* Добавляем отступ снизу */
+    flex-direction: row; 
 }
 
 table {
@@ -179,9 +197,12 @@ footer {
 }
 
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
+  border-radius: 10%;
+  display: block;
+  float: left;
+  background-color: #09ff00;
+  color: hsl(0, 0%, 0%);
+  padding: 8px 64.2px;
   font-size: 16px;
   border: none;
 }
@@ -189,16 +210,18 @@ footer {
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: grid;
 }
 
 
 .dropdown-content {
   display: none;
+  font-size: large;
+  margin-top: 40px;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #b8a68f;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
@@ -215,39 +238,167 @@ footer {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #ff0800;}
 
-@media (max-width: 768px) {
-    header {
-        width: 100%;
-        background-color: #87CEFA;
-        color: #008000;
+@media screen and (max-width: 768px){
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    header{
+        margin-bottom: 30px;
+        order: -1;
         text-align: center;
-        padding: 10px;
-        height: 400px;
-    }
-    nav {
-    
-        background-color: #45A29A;
-        position: static;
-        float: left;
-        margin: 300px;
-    }
-    .menu {
-        list-style: none;
-        padding: 0;
-    }
-    .block_chang_hyp {
-        flex-direction: column; /* Вертикальное направление для мобильных телефонов */
-    }
-    .change_hyperlink{
-        flex-direction: column;
-    }
-    /* Изменение порядка для больших экранов */
-    .link-list {
-        order: 1; /* Ссылки отображаются после таблицы на больших экранах */
-        margin-right: 0; /* Убираем отступ вправо */
     }
 
-    table {
-        order: 2; /* Таблица будет первой на больших экранах */
+    nav{
+        order: 0;
+        height: 160px;
+    }
+
+
+    .navigation li{
+        border-radius: 5% ;
+        list-style-type: none;
+        margin-top: 5px;
+        width: 165px;
+        background-color:#ffff00
+    }
+    
+    .navigation ul li a {
+        display: block;
+        color: #000;
+        padding: 8px 19px;
+        text-decoration: none;
+    }
+    
+    .flex-container1 {
+        text-align: center;
+        display: block;
+        
+    }
+    
+    .change_hyperlink{
+        margin-bottom: 40px;
+        border-radius: 3%;
+        background-color: #87CEFA;
+        order: 2
+    }
+    
+    .change_hyperlink_table{
+        margin-bottom: 40px;
+        border-radius: 3%;
+        background-color: #87CEFA;
+        order: 1
+    }
+    
+    .change_forma{
+        margin-bottom: 40px;
+        border-radius: 3%;
+        background-color: #87CEFA;
+        order: 3
+    }
+    
+    .block_chang_table{
+        width: 95%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .block_forma{
+        width: 95%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .dropbtn {
+        display: block;
+        border-radius: 5%;
+        background-color: #09ff00;
+        color: hsl(0, 0%, 0%);
+        padding: 8px 30px;
+        font-size: 16px;
+        border: none;
+      }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+    .dropdown:hover .dropdown-content {display: flex;}
+}
+
+
+
+
+
+/*
+@media (min-device-width: 576px){
+    header{
+        margin-bottom: 30px;
+        order: 0;
+    }
+    
+    .flex-container1{
+        text-align: center;
+        display: flex;
+        flex-direction: row; 
+    }
+
+    nav{
+        order: -1;
+        height: 70px;
+    }
+
+    .navigation_button_text{
+        font-size: 15px;
+    }
+
+    .navigation ul{
+        padding-right: 12px;
+    }
+    
+    .navigation li{
+        border-radius: 10%;
+        margin-right: 20px;
+        width: 100%;
+        margin-left: -10px;
+        list-style-type: none;
+    }
+    
+    .navigation ul li a {
+        display: block;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .change_hyperlink{
+        margin-bottom: 40px;
+        border-radius: 5%;
+        order: 0
+    }
+
+    .block_chang_hyp{
+        width: 85%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .block_chang_table{
+        width: 85%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .block_forma{
+        width: 85%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+}
+*/

@@ -7,53 +7,52 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 2</title>
+    <title>Задание 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
   </head>
   
   <body>
       
-      <div class="flex-container">
+      <main>
 
-          <nav>
-              <ul class="menu">
-                  <li>
-                      <div class="dropdown">
-                          <button class="dropbtn">Меню Ссылок</button>
-                          <div class="dropdown-content">
-                              <a href="https://www.citilink.ru/?_action=autologin&_success_login=1">Ситилинк</a>
-                              <a href="https://kuban.mts.ru/personal">МТС</a>
-                              <a href="https://ru.wikipedia.org/">Википедия</a>
-                          </div>
-                      </div>
-                  <li><a href="https://kubsu.ru">КубГУ</a></li>
+        <header class="col-12">
+                <img id="logo" src="https://i.pinimg.com/736x/68/6a/c1/686ac1eb7845dbf62368e920209ad5d7.jpg"/>
+
+
+                <div class="welcome"><b>Сайт с котятами</b></div>
+        
+        </header>
+
+          <nav class = "navigation">
+            <div>
+              <ul class="flex-container1">
+                  <li><a href="https://kubsu.ru">КубГУ</a></li>       
                   <li><a href="https://vk.com/index.php?ysclid=m1i3xk04t886878099">ВКонтаке</a></li>
-
+                  <li><div class="dropdown">
+                    <button class="dropbtn">Меню Ссылок</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.citilink.ru/?_action=autologin&_success_login=1">Ситилинк</a>
+                        <a href="https://kuban.mts.ru/personal">МТС</a>
+                        <a href="https://ru.wikipedia.org/">Википедия</a>
+                    </div>
+                </div></li>
               </ul>
+            </div>
           </nav>
 
 
-          <header>
-              
-                  <div>
-                      <img id="logo" src="https://i.pinimg.com/736x/68/6a/c1/686ac1eb7845dbf62368e920209ad5d7.jpg" alt="Наш лого" />
-                  </div>
-
-
-                  <div class="welcome"><h1>Сайт с котятами</h1></div>
-              
-          </header>
-
+          
+        <div class="row">
           <div class="change_hyperlink block_chang_hyp">
               <div class="hname"><h2>Маркированный список:</h2></div>
               <div class="otsyp">
-                  <ul class="link-list">
+                  <ul>
                       <li><a href="http://www.kubsu.ru/" target="_blank">Ссылка на главную страницу КубГУ(http)</a></li>
                       <li><a href="https://www.kubsu.ru/" target="_blank">Ссылка на главную страницу КубГУ(https)</a></li>
                       <li>
                           <em>Ночной университет<br /></em>
-                          <a href="http://www.kubsu.ru/"><img src="https://i5.photo.2gis.com/images/branch/0/30258560051398423_4290.jpg" style="width: 500px;" /></a>
+                          <a href="http://www.kubsu.ru/"><img src="https://i5.photo.2gis.com/images/branch/0/30258560051398423_4290.jpg" style="width: 400px;" /></a>
                       </li>
                       <li><a href="html2.html">Сокращенная ссылка на внутреннюю страницу</a></li>
                       <li><a href="Web-1.html">Сокращенная ссылка на главную страницу</a></li>
@@ -67,7 +66,7 @@
                       <li>Контекстная ссылка в тексте абзаца: <a href="https://rutube.ru/channel/28219202/videos/">ссылка на сайт</a>.</li>
                       <li><a href="https://en.wikipedia.org/wiki/Soviet_Union#Geography">Ссылка на фрагмент страницы стороннего сайта</a></li>
                       <li>
-                          <img src="https://i.pinimg.com/736x/66/89/49/668949d1d93bb38eae7557e6b3defa4a.jpg" style="width: 500px;" alt="Пример изображения" usemap="#image-map" />
+                          <img src="https://i.pinimg.com/736x/66/89/49/668949d1d93bb38eae7557e6b3defa4a.jpg" style="width: 400px;" alt="Пример изображения" usemap="#image-map" />
                           <map name="image-map">
                               <area shape="rect" coords="34,44,270,350" href="https://yandex.ru/maps/35/krasnodar/?ll=38.975313%2C45.035470&z=13" alt="Прямоугольная ссылка" />
                               <area shape="circle" coords="337,300,44" href="https://mail.ru" alt="Круглая ссылка" />
@@ -92,7 +91,7 @@
           <br />
 
 
-          <div class="change_hyperlink block_chang_hyp">
+          <div class="change_hyperlink_table block_chang_table">
               <div class="fname"><h3>Таблица</h3></div>
               <table>
                   <thead>
@@ -140,10 +139,10 @@
               </table>
           </div>
 
-          <div class="change_hyperlink block_chang_hyp">
+          <div class="change_forma block_forma">
               <div class="fname"><h3>HTML форма</h3></div>
               <form action="/" method="POST">
-
+                <div class="otsyp">
                   <label for="fullname">ФИО:</label>
                   <input type="text" id="fullname" name="fullname" required pattern="[А-Яа-яЁё\s]+" title="ФИО должно содержать только кириллицу"><br><br>
 
@@ -154,8 +153,7 @@
                   <input type="email" id="email" name="email" required><br><br>
 
                   <label for="birthdate">Дата рождения:</label>
-                  <input type="date" id="birthdate" name="birthdate" required max="2023-09-20"><br><br> <!-- Укажите правильную дату для ограничения -->
-
+                  <input type="date" id="birthdate" name="birthdate" required max="2023-09-20"><br><br>
                   <p>Пол:</p>
                   <input type="radio" id="male" name="gender" value="male">
                   <label for="male">Мужской</label><br>
@@ -188,6 +186,7 @@
                   </label><br><br>
 
                   <button type="submit">Сохранить</button>
+                  </div>
               </form>
               <script>
                   function validateForm() {
@@ -221,14 +220,19 @@
                   }
               </script>
           </div>
+        </div>
           <br></br>
 
+        </main>
           <footer>
               <div class="container">
                   <p>© 2024 Сайт с котятами. Варфоломеев Максим.</p>
               </div>
           </footer>
       </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 
 </html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
